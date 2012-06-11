@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+	<language id="com.lukereative.skrollr">
+		<name>Skrollr</name>
+		<root-zone>language-root.skrollr</root-zone>
+	</language>
+</settings>  
