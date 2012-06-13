@@ -1,11 +1,24 @@
 <?xml version="1.0"?>
 <injections>
-    <injection name="injection.skrollr.data-attribute" selector="language-root.html" action="insert-before-children">
+    <injection name="injection.skrollr.data-attribute" selector="html tag.open.html" action="insert-before-children">
     	<zone>
     		<expression>\s+(data-[0-9]+)(=)((")([^"]*)("))</expression>
-    		<capture number="1" name="attribute-name.data"/>
+    		<capture number="1" name="attribute-name.style.skrollr"/>
     		<capture number="2" name="punctuation.separator.attribute"/>
     		<capture number="3" name="string.quoted.double"/>
+    		<capture number="4" name="punctuation.definition.begin"/>
+    		<capture number="5" name="embedded.property-list.css">
+    			<subzones>
+    				<include syntax="language-root.css" collection="properties"/>
+    			</subzones>
+    		</capture>
+    		<capture number="6" name="punctuation.definition.end"/>
+    	</zone>
+        <zone>
+        	<expression>\s+(data-[0-9]+)(=)(('')([^']*)('))</expression>
+    		<capture number="1" name="attribute-name.style.skrollr"/>
+    		<capture number="2" name="punctuation.separator.attribute"/>
+    		<capture number="3" name="string.quoted.single"/>
     		<capture number="4" name="punctuation.definition.begin"/>
     		<capture number="5" name="embedded.property-list.css">
     			<subzones>
