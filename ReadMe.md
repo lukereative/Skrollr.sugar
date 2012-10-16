@@ -1,4 +1,4 @@
-# SilverStripe.sugar for Espresso
+# Skrollr.sugar for Espresso
 
 Skrollr.sugar adds CSS autocompletion for data attributes to MacRabbit's [Espresso](http://www.macrabbit.com/espresso/) text editor for Mac.
 
